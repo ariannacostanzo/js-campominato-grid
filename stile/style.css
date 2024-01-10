@@ -3,3 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Generics */
+
+body {
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+/* Utils */
+
+.cs-container {
+    background-color: white;
+    padding: 1rem 2rem;
+}
+
+/* Content */
+
+/* HEADER */
+
+header {
+    height: 10vh;
+}
+
+header button, header select {
+    border: 1px solid gray;
+    background-color: #e9e9ed;
+    height: 25px;
+    border-radius: 5px;
+}
+
+header button {
+    padding: 0 30px;
+}
+
+header select {
+    width: 190px;
+}
+
+
+/* MAIN */
+
+main {
+    height: 84vh;
+}
+
+/* FOOTER */
+
+footer {
+    height: 6vh;
+}
