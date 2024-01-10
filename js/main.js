@@ -4,12 +4,26 @@
 
 const gridElement = document.getElementById('grid');
 const form = document.querySelector('form');
+const gridSizeOptionElement = document.querySelector('select')
 
-form.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
+    gridElement.innerHTML = '';
+
+    const gridSizeOption = gridSizeOptionElement.value; 
+    logSomething(gridSizeOption);
+    let rows = 10;
+    let cols = 10;
+
+    if (gridSizeOption === 'medium') {
+        rows = 9;
+        cols = 9;
+    } else if (gridSizeOption === 'small') {
+        rows = 7;
+        cols = 7;
+    }
     
-    const rows = 10;
-    const cols = 10;
+    
     const cellQuantity = rows * cols;
 
     for (let i = 1; i <= cellQuantity; i++) {
@@ -26,4 +40,4 @@ form.addEventListener('click', (e) => {
     
 
 
-}, {once : true});
+});
