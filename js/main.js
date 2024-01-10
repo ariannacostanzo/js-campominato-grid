@@ -26,4 +26,4 @@ form.addEventListener('click', (e) => {
     
 
 
-});
+}, {once : true});
