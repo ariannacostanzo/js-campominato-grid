@@ -16,6 +16,11 @@ form.addEventListener('click', (e) => {
         const cell = createCell(i);
 
 
+        cell.addEventListener('click', () => {
+            logSomething(i);
+            cell.classList.toggle('clicked');
+        })
+
         gridElement.appendChild(cell);
     }
     
