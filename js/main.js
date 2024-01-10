@@ -14,13 +14,16 @@ form.addEventListener('submit', (e) => {
     logSomething(gridSizeOption);
     let rows = 10;
     let cols = 10;
+    let gridSizeCode = 'big';
 
     if (gridSizeOption === 'medium') {
         rows = 9;
         cols = 9;
+        gridSizeCode = 'medium'
     } else if (gridSizeOption === 'small') {
         rows = 7;
         cols = 7;
+        gridSizeCode = 'small'
     }
     
     
@@ -28,7 +31,7 @@ form.addEventListener('submit', (e) => {
 
     for (let i = 1; i <= cellQuantity; i++) {
         const cell = createCell(i);
-
+        cell.classList.add(gridSizeCode);
 
         cell.addEventListener('click', () => {
             logSomething(i);
